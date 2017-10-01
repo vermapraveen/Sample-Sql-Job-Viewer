@@ -1,0 +1,15 @@
+node_modules
+bin
+obj
+packages
+*.pdb
+*.suo
+*.cache
+.idea
+*.user
+PrecompiledWeb
+coverageforMvcOld
+.vs
+TestResults
+*.log
+.sonarqube
