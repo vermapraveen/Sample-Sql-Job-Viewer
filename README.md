@@ -1,2 +1,2 @@
 # SimpleSqlJobUI
-Should be easy view SQL Server jobs details and history
+Should be easy to view SQL Server jobs details and history
