@@ -1,0 +1,10 @@
+-p C:\Program Files\dotnet\dotnet.exe
+-pidFile C:\workarea\SqlJob\SqlJob\Sqljob.Api\bin\IISSupport\pidfile.txt
+-wd C:\workarea\SqlJob\SqlJob\Sqljob.Api
+-a exec "C:\workarea\SqlJob\SqlJob\Sqljob.Api\bin\Debug\netcoreapp2.0\Sqljob.Api.dll"
+-wbe Global\Build2131b3bb-83fa-43c4-9996-876e7a890dd9
+-lse Global\Launchd9c62d97-80cc-4ced-8865-b14870351ae1
+-pipe 5402b832-928e-4a4e-84fb-2bf099abdd3f
+-pr Sqljob.Api
+-owningPid 28184
+-env ASPNETCORE_CONTENTROOT=C:\workarea\SqlJob\SqlJob\Sqljob.Api|ASPNETCORE_HOSTINGSTARTUPASSEMBLIES=Microsoft.AspNetCore.ApplicationInsights.HostingStartup|ASPNETCORE_ENVIRONMENT=Development|COMPLUS_ForceENC=1|

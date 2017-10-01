@@ -1,0 +1,11 @@
+C:\workarea\SqlJob\SqlJob\Sqljob.Api\bin\Debug\netcoreapp2.0\Sqljob.Api.dll.config
+C:\workarea\SqlJob\SqlJob\Sqljob.Api\bin\Debug\netcoreapp2.0\Sqljob.Api.deps.json
+C:\workarea\SqlJob\SqlJob\Sqljob.Api\bin\Debug\netcoreapp2.0\Sqljob.Api.runtimeconfig.json
+C:\workarea\SqlJob\SqlJob\Sqljob.Api\bin\Debug\netcoreapp2.0\Sqljob.Api.runtimeconfig.dev.json
+C:\workarea\SqlJob\SqlJob\Sqljob.Api\bin\Debug\netcoreapp2.0\Sqljob.Api.dll
+C:\workarea\SqlJob\SqlJob\Sqljob.Api\bin\Debug\netcoreapp2.0\Sqljob.Api.pdb
+C:\workarea\SqlJob\SqlJob\Sqljob.Api\obj\Debug\netcoreapp2.0\Sqljob.Api.csproj.CoreCompileInputs.cache
+C:\workarea\SqlJob\SqlJob\Sqljob.Api\obj\Debug\netcoreapp2.0\Sqljob.Api.AssemblyInfoInputs.cache
+C:\workarea\SqlJob\SqlJob\Sqljob.Api\obj\Debug\netcoreapp2.0\Sqljob.Api.AssemblyInfo.cs
+C:\workarea\SqlJob\SqlJob\Sqljob.Api\obj\Debug\netcoreapp2.0\Sqljob.Api.dll
+C:\workarea\SqlJob\SqlJob\Sqljob.Api\obj\Debug\netcoreapp2.0\Sqljob.Api.pdb

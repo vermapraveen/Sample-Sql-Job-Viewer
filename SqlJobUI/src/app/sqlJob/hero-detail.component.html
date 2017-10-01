@@ -1,0 +1,7 @@
+<h3>{{hero.jobName}}</h3>
+<div>Job Details: </div>
+<ul class="heroes">
+  <li *ngFor="let step of hero.allSteps" [class.selected]="step === selectedStep" (click)="onSelect(hero)">
+    {{step.stepId}}<span class="badge">{{step.stepName}}</span>    
+  </li>
+</ul>
