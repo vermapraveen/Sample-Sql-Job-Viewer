@@ -1,13 +1,13 @@
-<div>
-  <h3>{{job.jobName}}</h3>
-  <div>Job Details: </div>
-  <ul class="heroes">
-    <li *ngFor="let step of job.allSteps" [class.selected]="step === selectedStep" (click)="onSelect(job)">
-      {{step.stepId}}
-      <span class="badge">{{step.stepName}}</span>
-    </li>
-  </ul>
+<div *ngIf="job && jobDetails">
+  <h1>Job Details Widget: </h1>
+  <h3>{{jobDetails.name}}</h3>
+    <ul class="heroes">
+      <li *ngFor="let step of jobDetails.allSteps" [class.selected]="step === selectedStep" (click)="onSelect(job)">
+        {{step.stepId}}
+        <span class="badge">{{step.stepName}}</span>
+      </li>
+    </ul>
 </div>
 <div>
-  
+
 </div>

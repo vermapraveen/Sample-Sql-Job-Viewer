@@ -28,12 +28,16 @@ export class JobService {
     }
 
     getJobSteps(id: number): Promise<JobDetails> {
-        console.log("in getJobSteps")
         return this.http.get(this.stepDetails)
             .toPromise()
             .then(response => {
-                console.log("response: " + response)
-                return response.json().data as JobDetails
+                //return response.json().data as JobDetails
+                var allData = response.json().data as JobDetails[];
+
+                var selectedJobData = allData.find(x => x.id === id);
+                
+                return selectedJobData;
+
             })
             .catch(this.handleError);
     }

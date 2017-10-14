@@ -10,12 +10,6 @@
     <span class="badge">{{job.id}}</span> {{job.name}}
   </li>
 </ul>
-<div *ngIf="selectedJob">
-  <h2>
-    Selected Report>> {{selectedJob.name | uppercase}}
-  </h2>
-  <button (click)="gotoDetail()">View Details</button>
-</div>
 <div>
-  <job-detail></job-detail>
+  <job-detail [job]="selectedJob"></job-detail>
 </div>

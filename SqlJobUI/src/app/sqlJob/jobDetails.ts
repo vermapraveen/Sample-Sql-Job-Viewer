@@ -1,7 +1,8 @@
 export class JobDetails {
     allSteps: StepDetails[];
     connectionString: string;
-    jobName: string;
+    name: string;
+    id: number;
 }
 
 export class StepDetails {
