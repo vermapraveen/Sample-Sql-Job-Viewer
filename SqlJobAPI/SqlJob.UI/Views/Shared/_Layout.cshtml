@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SqlJob.UI</title>
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+</head>
+<body>
+    <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Currently Running Jobs</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="ActiveJobs">All Active Jobs</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="JobWithSteps">Jobs with steps</a></li>
+            </ul>
+        </div>
+    <div>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>@RenderSection("DebugInfo", required: false) </p>
+        </footer>
+    </div>
+
+
+
+</body>
+</html>
