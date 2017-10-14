@@ -1,0 +1,8 @@
+<h3>Bookmarked Jobs </h3>
+<div class="grid grid-pad">
+  <a *ngFor="let job of bookmarkedJobs" [routerLink]="['/detail', job.id]" class="col-1-4 " (click)="onSelect(job)">
+    <div class="module hero">
+      <h4>{{job.name}}</h4>
+    </div>
+  </a>
+</div>

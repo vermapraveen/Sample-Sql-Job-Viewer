@@ -1,0 +1,11 @@
+<section class="container">
+    <div class="one">
+        <h1>{{title}}</h1>
+        <a routerLink="/sqlJobs/dashboard" routerLinkActive="active">Dashboard</a>
+        <a routerLink="/sqlJobs/allJobs" routerLinkActive="active">All Jobs</a>
+        <router-outlet></router-outlet>
+    </div>
+    <div class="two">
+        <job-detail></job-detail>
+    </div>
+</section>

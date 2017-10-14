@@ -1,0 +1,21 @@
+<h2>All Reports</h2>
+<div>
+  <label>Report name:</label> <input #jobName />
+  <button (click)="add(jobName.value); jobName.value=''">
+    Add
+  </button>
+</div>
+<ul class="heroes">
+  <li *ngFor="let job of allJobs" [class.selected]="job === selectedJob" (click)="onSelect(job)">
+    <span class="badge">{{job.id}}</span> {{job.name}}
+  </li>
+</ul>
+<div *ngIf="selectedJob">
+  <h2>
+    Selected Report>> {{selectedJob.name | uppercase}}
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+<div>
+  <job-detail></job-detail>
+</div>
