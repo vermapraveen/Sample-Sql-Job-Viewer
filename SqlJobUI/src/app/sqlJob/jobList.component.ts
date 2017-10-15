@@ -19,11 +19,14 @@ export class JobListComponent implements OnInit {
     private jobService: JobService) { }
 
   getAllJobs(): void {
-    this.jobService.getAllJobs().then(allJobData =>
-      {
-        this.allJobs = allJobData.jobs;
-        
-      })
+    this.jobService.getAllJobs().then(allJobData => {
+      this.allJobs = allJobData.jobs;
+
+      if (this.allJobs.length > 0) {
+        this.onSelect(this.allJobs[0]);
+      }
+
+    })
   }
 
   ngOnInit(): void {
@@ -32,6 +35,7 @@ export class JobListComponent implements OnInit {
 
   onSelect(selectedJob: Job): void {
     this.selectedJob = selectedJob;
+    this.jobService.jobSelectionChangedTo(selectedJob.id);
     // this.router.navigate(['/sqlJobs/detail', selectedJob.id]);
   }
 

@@ -18,11 +18,12 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.jobService.getAllJobs()
       .then(allJobs => {
-        this.bookmarkedJobs = allJobs.jobs.slice(1, 6)
+        this.bookmarkedJobs = allJobs.jobs.slice(0, 6)
       });
   }
 
   onSelect(selectedJob: Job): void {
+    this.jobService.jobSelectionChangedTo(selectedJob.id);
     // this.router.navigate(['/sqlJobs/detail', selectedJob.id]);
   }
 

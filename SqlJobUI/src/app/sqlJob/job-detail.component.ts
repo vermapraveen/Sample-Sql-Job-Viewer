@@ -30,7 +30,9 @@ export class JobDetailComponent {
     private jobService: JobService,
     private route: ActivatedRoute,
     private location: Location
-  ) { }
+  ) {
+    jobService.jobUpdate$.subscribe(x => this.getJobDetails(x));
+  }
 
   goBack(): void {
     this.location.back();

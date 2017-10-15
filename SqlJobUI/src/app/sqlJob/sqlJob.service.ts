@@ -6,17 +6,25 @@ import 'rxjs/add/operator/toPromise';
 import { Job } from './job';
 import { JobData } from './jobData';
 import { JobDetails } from './jobDetails';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class JobService {
     private allJobsUrl = 'api/jobData';
     private stepDetails = 'api/jobSteps';
+    private jobUpdateSource = new Subject<number>();
 
     //private allJobsUrl = 'http://localhost/Sqljob.Api/api/SqlJob/GetAllJobs';
 
     private headers = new Headers({ 'Content-Type': 'application/json' });
 
     constructor(private http: Http) { }
+
+    jobUpdate$ = this.jobUpdateSource.asObservable();
+
+    jobSelectionChangedTo(jobId: number) {
+        this.jobUpdateSource.next(jobId);
+    }
 
     getAllJobs(): Promise<JobData> {
         return this.http.get(this.allJobsUrl)
@@ -35,7 +43,7 @@ export class JobService {
                 var allData = response.json().data as JobDetails[];
 
                 var selectedJobData = allData.find(x => x.id === id);
-                
+
                 return selectedJobData;
 
             })
