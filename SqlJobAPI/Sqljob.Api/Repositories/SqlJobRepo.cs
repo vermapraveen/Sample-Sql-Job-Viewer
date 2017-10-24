@@ -12,7 +12,8 @@ public class SqlJobRepo
     public SqlJobRepo()
     {
         //connectionString = configuration.GetValue<string>("DBInfo:ConnectionString");
-        _connectionString = "Data Source=SVCPLMGSQL01.dswh.ds.adp.com;Initial Catalog=msdb;Integrated Security=True";
+        //_connectionString = "Data Source=SVCPLMGSQL01.dswh.ds.adp.com;Initial Catalog=msdb;Integrated Security=True";
+        _connectionString = "Data Source=c04rfolotm0.dslab.ad.adp.com;Initial Catalog=msdb;Integrated Security=True";
     }
 
     public SqlJobData GetCurrentRunningJobs()
@@ -76,12 +77,12 @@ public class SqlJobRepo
         }
     }
 
-    public SqlStepsData GetAllJobs()
+    public IEnumerable<SqlStepsData> GetAllJobs()
     {
         string sql = string.Format(
             @"SELECT 
-                js.Job_id as Id,
-                j.name as Name, 
+                js.Job_id as JobId,
+                j.name as JobName, 
                 j.enabled as IsJobEnabled
                 ,js.step_id as StepId
                 ,js.step_name as StepName
@@ -101,11 +102,23 @@ public class SqlJobRepo
         using (var conn = new SqlConnection(_connectionString))
         {
             var steps = conn.Query<SqlJobSteps>(sql);
-            return new SqlStepsData
-            {
-                ConnectionString = _connectionString,
-                AllSteps = steps
-            };
+
+            IEnumerable<SqlStepsData> swj =
+                from stepsWithJob in steps
+                group stepsWithJob by
+                new
+                {
+                    stepsWithJob.JobId,
+                    stepsWithJob.JobName
+                } into gsc
+                select new SqlStepsData()
+                {
+                    Id = gsc.Key.JobId,
+                    Name = gsc.Key.JobName,
+                    AllSteps = gsc.ToList()
+                };
+
+            return swj;
 
         }
     }

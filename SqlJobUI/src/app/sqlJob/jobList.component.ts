@@ -26,7 +26,7 @@ export class JobListComponent implements OnInit {
         this.onSelect(this.allJobs[0]);
       }
 
-    })
+    });
   }
 
   ngOnInit(): void {

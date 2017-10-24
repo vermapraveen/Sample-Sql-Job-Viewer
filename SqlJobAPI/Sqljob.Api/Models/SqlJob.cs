@@ -11,6 +11,8 @@ namespace helloWebApi.Models
 
     public class SqlStepsData
     {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
         public string ConnectionString { get; set; }
         public IEnumerable<SqlJobSteps> AllSteps { get; set; }
     }
@@ -28,6 +30,8 @@ namespace helloWebApi.Models
     public class SqlJobSteps
     {
         public Guid JobId { get; set; }
+        public string JobName { get; set; }
+        public bool IsJobEnabled { get; set; }
         public int StepId { get; set; }
         public string StepName { get; set; }
         public string StepType { get; set; }     

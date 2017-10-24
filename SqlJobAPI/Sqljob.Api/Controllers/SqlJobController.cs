@@ -17,7 +17,7 @@ namespace helloWebApi.Controllers
 
         [Route("api/SqlJob/GetAll")]
         [HttpGet]
-        public SqlStepsData GetAll()
+        public IEnumerable<SqlStepsData> GetAll()
         {
             var jobRepo = new SqlJobRepo();
             return jobRepo.GetAllJobs();

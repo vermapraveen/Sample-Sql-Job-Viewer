@@ -10,11 +10,12 @@ import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class JobService {
-    private allJobsUrl = 'api/jobData';
-    private stepDetails = 'api/jobSteps';
+    // private allJobsUrl = 'api/jobData';
+    //
     private jobUpdateSource = new Subject<number>();
 
-    //private allJobsUrl = 'http://localhost/Sqljob.Api/api/SqlJob/GetAllJobs';
+    private allJobsUrl = 'http://localhost/Sqljob.Api/api/SqlJob/GetAllJobs';
+    private stepDetails = 'http://localhost/Sqljob.Api/api/SqlJob/GetAll';
 
     private headers = new Headers({ 'Content-Type': 'application/json' });
 
@@ -30,7 +31,7 @@ export class JobService {
         return this.http.get(this.allJobsUrl)
             .toPromise()
             .then(response => {
-                return response.json().data as JobData
+                return response.json() as JobData;
             })
             .catch(this.handleError);
     }
@@ -39,10 +40,12 @@ export class JobService {
         return this.http.get(this.stepDetails)
             .toPromise()
             .then(response => {
-                //return response.json().data as JobDetails
-                var allData = response.json().data as JobDetails[];
+                // return response.json().data as JobDetails
+                const allData = response.json() as JobDetails[];
+                console.log("allData");
+                console.log(allData);
 
-                var selectedJobData = allData.find(x => x.id === id);
+                const selectedJobData = allData.find(x => x.id === id);
 
                 return selectedJobData;
 
