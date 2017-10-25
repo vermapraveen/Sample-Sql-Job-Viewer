@@ -3,9 +3,9 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Job } from './job';
-import { JobData } from './jobData';
-import { JobDetails } from './jobDetails';
+import { Job } from './../commonModels/job';
+import { JobData } from './../commonModels/jobData';
+import { JobDetails } from './../commonModels/jobDetails';
 import { Subject } from 'rxjs/Subject';
 
 @Injectable()
@@ -42,13 +42,9 @@ export class JobService {
             .then(response => {
                 // return response.json().data as JobDetails
                 const allData = response.json() as JobDetails[];
-                console.log("allData");
-                console.log(allData);
-
                 const selectedJobData = allData.find(x => x.id === id);
 
                 return selectedJobData;
-
             })
             .catch(this.handleError);
     }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl:"./sqlJob.component.html",
+  templateUrl: './sqlJob.component.html',
   styleUrls: ['./sqlJob.component.css'],
 })
 export class SqlJobComponent {

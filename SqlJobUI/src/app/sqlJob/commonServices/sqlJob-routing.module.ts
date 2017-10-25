@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { SqlJobComponent } from './sqlJob.component';
-import { DashboardComponent } from './dashboard.component';
+import { SqlJobComponent } from './../commonComp/sqlJob.component';
+import { DashboardComponent } from './../dashboardComp/dashboard.component';
 
-import { JobListComponent } from './jobList.component';
-import { JobDetailComponent } from './job-detail.component';
+import { JobListComponent } from './../listComp/jobList.component';
+import { JobDetailComponent } from './../detailComp/job-detail.component';
 
 const routes: Routes = [
   {

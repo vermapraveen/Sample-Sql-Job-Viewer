@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { SqlJobComponent } from './sqlJob.component';
+import { SqlJobComponent } from './commonComp/sqlJob.component';
 
-import { DashboardComponent } from './dashboard.component';
+import { DashboardComponent } from './dashboardComp/dashboard.component';
 
-import { JobDetailComponent } from './job-detail.component';
-import { JobListComponent } from './jobList.component';
-import { JobService } from './sqlJob.service';
+import { JobDetailComponent } from './detailComp/job-detail.component';
+import { JobListComponent } from './listComp/jobList.component';
+import { JobService } from './commonServices/sqlJob.service';
 
-import { SqlJobRoutingModule } from './sqlJob-routing.module';
+import { SqlJobRoutingModule } from './commonServices/sqlJob-routing.module';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from './commonServices/in-memory-data.service';
 
 @NgModule({
     imports: [

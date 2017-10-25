@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SqlJobComponent } from './sqlJob/sqlJob.component';
+import { SqlJobComponent } from './sqlJob/commonComp/sqlJob.component';
 import { SnippetComponent } from './snippet/snippet.component';
 
 @Component({
@@ -9,7 +9,7 @@ import { SnippetComponent } from './snippet/snippet.component';
   <nav>
   <a routerLink="/sqlJobs" routerLinkActive="active">Sql Jobs</a>
   <a routerLink="/snippet" routerLinkActive="active">Snippets</a>
-  
+
   <router-outlet></router-outlet>
   </nav>
 `,

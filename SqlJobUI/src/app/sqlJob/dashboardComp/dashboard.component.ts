@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Job } from './job';
-import { JobService } from './sqlJob.service';
-import { JobData } from './jobData';
+import { Job } from './../commonModels/job';
+import { JobService } from './../commonServices/sqlJob.service';
+import { JobData } from './../commonModels/jobData';
 
 @Component({
   selector: 'my-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css', './sqlJob.component.css']
+  styleUrls: ['./dashboard.component.css', '/../commonComp/sqlJob.component.css']
 })
 export class DashboardComponent implements OnInit {
 

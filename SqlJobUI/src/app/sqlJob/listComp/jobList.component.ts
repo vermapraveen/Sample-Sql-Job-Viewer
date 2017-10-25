@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Job } from './job';
-import { JobService } from './sqlJob.service';
-import { JobData } from './jobData';
+import { Job } from './../commonModels/job';
+import { JobService } from './../commonServices/sqlJob.service';
+import { JobData } from './../commonModels/jobData';
 
 @Component({
   selector: 'sqlJob-List',

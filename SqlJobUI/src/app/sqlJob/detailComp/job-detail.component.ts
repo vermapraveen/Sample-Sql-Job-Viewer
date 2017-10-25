@@ -3,10 +3,10 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { JobDetails, StepDetails } from './jobDetails';
+import { JobDetails, StepDetails } from './../commonModels/jobDetails';
 
-import { JobService } from './sqlJob.service';
-import { Job } from './job';
+import { JobService } from './../commonServices/sqlJob.service';
+import { Job } from './../commonModels/job';
 @Component({
   selector: 'job-detail',
   templateUrl: './job-detail.component.html',
