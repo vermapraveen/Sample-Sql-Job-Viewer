@@ -17,24 +17,23 @@ import { InMemoryDataService } from './commonServices/in-memory-data.service';
 import { MatGridListModule } from '@angular/material';
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        FormsModule,
-        HttpModule,
-        HttpClientModule,
-        // InMemoryWebApiModule.forRoot(InMemoryDataService),
-        SqlJobRoutingModule,
-        MatGridListModule,
-    ],
-    declarations: [
-        DashboardComponent,
-        JobDetailComponent,
-        JobListComponent,
-        SqlJobComponent,
-    ],
-    exports: [SqlJobComponent],
-    providers: [JobService],
-    bootstrap: [SqlJobComponent]
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    HttpClientModule,
+    // InMemoryWebApiModule.forRoot(InMemoryDataService),
+    SqlJobRoutingModule,
+    MatGridListModule,
+  ],
+  declarations: [
+    DashboardComponent,
+    JobDetailComponent,
+    JobListComponent,
+    SqlJobComponent
+  ],
+  exports: [SqlJobComponent],
+  providers: [JobService],
+  bootstrap: [SqlJobComponent]
 })
-export class SqlJobModule {
-}
+export class SqlJobModule {}

@@ -3,10 +3,13 @@
   color: white;
 }
 .heroes {
-  margin: 0 0 2em 10em;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+.heroes ul {
+  margin: 0 0 0 0;
   list-style-type: none;
   padding: 0;
-  width: 50em;
 }
 .heroes li {
   cursor: pointer;

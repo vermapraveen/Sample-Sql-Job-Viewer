@@ -1,10 +1,8 @@
 <div *ngIf="job && jobDetails">
-  <h1>Job Details Widget: </h1>
   <h3>{{jobDetails.name}}</h3>
     <ul class="heroes">
-      <li *ngFor="let step of jobDetails.allSteps" [class.selected]="step === selectedStep" (click)="onSelect(job)">
-        {{step.stepId}}
-        <span class="badge">{{step.stepName}}</span>
+      <li *ngFor="let step of jobDetails.allSteps" [class.selected]="step === selectedStep" (click)="onSelect(step)">
+          {{step.stepName}}
       </li>
     </ul>
 </div>

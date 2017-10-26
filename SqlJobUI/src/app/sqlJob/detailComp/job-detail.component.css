@@ -3,10 +3,13 @@
   color: white;
 }
 .heroes {
-  margin: 0 0 2em 0;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+.heroes ul {
+  margin: 0 0 0 0;
   list-style-type: none;
   padding: 0;
-  width: 50em;
 }
 .heroes li {
   cursor: pointer;
@@ -44,7 +47,7 @@
   height: 1.8em;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
-  width: 30em;
+  width: 20em;
 }
 button {
   font-family: Arial;
