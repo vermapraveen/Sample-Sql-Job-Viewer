@@ -14,6 +14,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './commonServices/in-memory-data.service';
+import { MatGridListModule } from '@angular/material';
 
 @NgModule({
     imports: [
@@ -23,6 +24,7 @@ import { InMemoryDataService } from './commonServices/in-memory-data.service';
         HttpClientModule,
         // InMemoryWebApiModule.forRoot(InMemoryDataService),
         SqlJobRoutingModule,
+        MatGridListModule,
     ],
     declarations: [
         DashboardComponent,
@@ -30,7 +32,7 @@ import { InMemoryDataService } from './commonServices/in-memory-data.service';
         JobListComponent,
         SqlJobComponent,
     ],
-    exports: [SqlJobComponent],
+    exports: [SqlJobComponent, MatGridListModule],
     providers: [JobService],
     bootstrap: [SqlJobComponent]
 })

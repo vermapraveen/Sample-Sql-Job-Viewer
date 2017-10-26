@@ -9,6 +9,8 @@ import { SqlJobModule } from './sqlJob/sqlJob.Module';
 import { SnippetModule } from './snippet/snippet.Module';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ConnectionComponent } from './sqlJob/connectionComp/connection.component';
+import { MatGridListModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -16,11 +18,11 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     AppRoutingModule,
     SqlJobModule,
-    SnippetModule
+    SnippetModule,
+    MatGridListModule
   ],
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, ConnectionComponent],
+  exports: [MatGridListModule],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

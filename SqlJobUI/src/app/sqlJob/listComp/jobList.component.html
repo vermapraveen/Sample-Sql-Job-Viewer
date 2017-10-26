@@ -2,12 +2,12 @@
 <div>
   <label>Report name:</label> <input #jobName />
   <button (click)="add(jobName.value); jobName.value=''">
-    Add
+    Search
   </button>
 </div>
 <ul class="heroes">
   <li *ngFor="let job of allJobs" [class.selected]="job === selectedJob" (click)="onSelect(job)">
-    <span class="badge">{{job.id}}</span> {{job.name}}
+     {{job.name}}
   </li>
 </ul>
 <div>

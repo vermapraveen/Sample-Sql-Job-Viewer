@@ -1,9 +1,16 @@
 import { Component } from '@angular/core';
+import { MatGridListModule } from '@angular/material';
 
 @Component({
   templateUrl: './sqlJob.component.html',
-  styleUrls: ['./sqlJob.component.css'],
+  styleUrls: ['./sqlJob.component.css']
 })
 export class SqlJobComponent {
   title = 'Welcome to SQL Jobs Module';
+  tiles = [
+    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
+    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
+    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
+    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+  ];
 }
