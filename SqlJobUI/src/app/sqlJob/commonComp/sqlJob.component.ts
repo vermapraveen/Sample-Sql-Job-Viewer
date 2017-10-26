@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MatGridListModule } from '@angular/material';
 
 @Component({
   templateUrl: './sqlJob.component.html',

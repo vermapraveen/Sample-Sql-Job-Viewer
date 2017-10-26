@@ -32,7 +32,7 @@ import { MatGridListModule } from '@angular/material';
         JobListComponent,
         SqlJobComponent,
     ],
-    exports: [SqlJobComponent, MatGridListModule],
+    exports: [SqlJobComponent],
     providers: [JobService],
     bootstrap: [SqlJobComponent]
 })

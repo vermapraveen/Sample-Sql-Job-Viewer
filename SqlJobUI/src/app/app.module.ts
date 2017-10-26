@@ -10,7 +10,6 @@ import { SnippetModule } from './snippet/snippet.Module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ConnectionComponent } from './sqlJob/connectionComp/connection.component';
-import { MatGridListModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -19,10 +18,8 @@ import { MatGridListModule } from '@angular/material';
     AppRoutingModule,
     SqlJobModule,
     SnippetModule,
-    MatGridListModule
   ],
   declarations: [AppComponent, ConnectionComponent],
-  exports: [MatGridListModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
