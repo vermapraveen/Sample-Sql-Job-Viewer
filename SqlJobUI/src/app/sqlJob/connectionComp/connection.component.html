@@ -1,3 +1,7 @@
-<p>
-  connection works!
-</p>
+<div>
+  <label>Connection String:</label>
+  <input #connectionText style="width:500px;" type="text" [(ngModel)]="connectionString" required readonly="{{isConnectionValid}}">
+  <button (click)="verify();">
+    Test and Set
+  </button>
+</div>

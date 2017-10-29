@@ -9,7 +9,6 @@ import { SqlJobModule } from './sqlJob/sqlJob.Module';
 import { SnippetModule } from './snippet/snippet.Module';
 
 import { AppRoutingModule } from './app-routing.module';
-import { ConnectionComponent } from './sqlJob/connectionComp/connection.component';
 
 @NgModule({
   imports: [
@@ -19,7 +18,7 @@ import { ConnectionComponent } from './sqlJob/connectionComp/connection.componen
     SqlJobModule,
     SnippetModule,
   ],
-  declarations: [AppComponent, ConnectionComponent],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

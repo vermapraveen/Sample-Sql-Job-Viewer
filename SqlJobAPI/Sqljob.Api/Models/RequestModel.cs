@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 
 namespace Sqljob.Api.Models
 {
     public class RequestModel
     {
-        public Guid JobId { get; set; }
+        [JsonProperty("connectionString")]
         public string ConnectionString { get; set; }
     }
 }

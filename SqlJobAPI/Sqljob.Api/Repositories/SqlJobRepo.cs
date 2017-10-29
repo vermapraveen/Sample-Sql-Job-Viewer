@@ -43,6 +43,21 @@ public class SqlJobRepo
         }
     }
 
+    internal bool TestConnection(string connectionString)
+    {
+        try
+        {
+            using (var conn = new SqlConnection(connectionString))
+            {
+                return true;
+            }
+        }
+        catch (Exception)
+        {
+            return false;
+        }
+    }
+
     internal SqlStepsData GetById(string jobId)
     {
         string sql = string.Format(@"

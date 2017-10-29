@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using helloWebApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using Sqljob.Api.Models;
 
 namespace helloWebApi.Controllers
 {
@@ -37,6 +38,14 @@ namespace helloWebApi.Controllers
         {
             var jobRepo = new SqlJobRepo();
             return jobRepo.GetAllJobNames();
+        }
+
+        [Route("api/SqlJob/Test")]
+        [HttpPost]
+        public bool Test([FromBody] RequestModel requestData)
+        {
+            var jobRepo = new SqlJobRepo();
+            return jobRepo.TestConnection(requestData.ConnectionString);
         }
     }
 }

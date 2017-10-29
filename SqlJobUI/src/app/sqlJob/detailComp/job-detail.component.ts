@@ -43,7 +43,7 @@ export class JobDetailComponent {
     this.jobService.getJobSteps(jobId)
       .then(jobData => {
         this.jobDetails = jobData;
-      })
+      });
   }
 
   onSelect(step: StepDetails): void {

@@ -1,16 +1,13 @@
 <h2>All Jobs</h2>
-<div>
-  <label>Job name:</label> <input #jobName />
+<!-- <div>
+  <label>Job name:</label>
+  <input #jobName />
   <button (click)="add(jobName.value); jobName.value=''">
     Search
   </button>
-</div>
+</div> -->
 <ul class="heroes">
   <li *ngFor="let job of allJobs" [class.selected]="job === selectedJob" (click)="onSelect(job)">
-     {{job.name}}
+    {{job.name}}
   </li>
 </ul>
-<div>
-  <!-- <job-detail [job]="selectedJob"></job-detail> -->
-  <!-- <job-detail ></job-detail> -->
-</div>

@@ -1,3 +1,4 @@
+// import { ConnectionComponent } from './../connectionComp/connection.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -6,7 +7,6 @@ import { DashboardComponent } from './../dashboardComp/dashboard.component';
 
 import { JobListComponent } from './../listComp/jobList.component';
 import { JobDetailComponent } from './../detailComp/job-detail.component';
-
 const routes: Routes = [
   {
     path: 'sqlJobs',
@@ -16,12 +16,16 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       {
         path: 'allJobs',
-        component: JobListComponent,
+        component: JobListComponent
       },
       {
         path: 'detail/:id',
         component: JobDetailComponent
       },
+      // {
+      //   path: 'connectionString',
+      //   component: ConnectionComponent
+      // }
     ]
   }
 ];
@@ -30,4 +34,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class SqlJobRoutingModule { }
+export class SqlJobRoutingModule {}

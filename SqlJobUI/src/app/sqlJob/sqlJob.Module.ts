@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './commonServices/in-memory-data.service';
 import { MatGridListModule } from '@angular/material';
+import { ConnectionComponent } from './connectionComp/connection.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { MatGridListModule } from '@angular/material';
     DashboardComponent,
     JobDetailComponent,
     JobListComponent,
-    SqlJobComponent
+    SqlJobComponent,
+    ConnectionComponent
   ],
   exports: [SqlJobComponent],
   providers: [JobService],
