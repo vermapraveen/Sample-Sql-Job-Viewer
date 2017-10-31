@@ -2,3 +2,4 @@
 wwwroot
 bin
 obj
+*.suo

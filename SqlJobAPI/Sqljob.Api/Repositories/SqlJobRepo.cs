@@ -1,20 +1,16 @@
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Extensions.Configuration;
 using Dapper;
-using System.Data.SqlClient;
 using helloWebApi.Models;
 using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
 
 public class SqlJobRepo
 {
     private string _connectionString;
-    public SqlJobRepo()
+    public SqlJobRepo(string connectionString)
     {
-        //connectionString = configuration.GetValue<string>("DBInfo:ConnectionString");
-        //_connectionString = "Data Source=SVCPLMGSQL01.dswh.ds.adp.com;Initial Catalog=msdb;Integrated Security=True";
-        //_connectionString = "Data Source=c04rfolotm0.dslab.ad.adp.com;Initial Catalog=msdb;Integrated Security=True";
-        _connectionString = "Data Source=svcdrbrsql02.dslab.ad.adp.com\\RED2;Initial Catalog=msdb;Integrated Security=True";
+        _connectionString = connectionString;
     }
 
     public SqlJobData GetCurrentRunningJobs()
